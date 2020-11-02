@@ -14,4 +14,3 @@ def detector_id(region):
     client = boto3.client("guardduty", region_name=region)
     response = client.list_detectors()["DetectorIds"]
     return response.pop()
-
